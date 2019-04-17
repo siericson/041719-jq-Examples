@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery - commands</title>
+    <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
+    
+    <script>
+        $(document).ready(function(){
+//            $('article').wrap('<section class="highlight"></section>');
+            $('article').wrapAll('<section class="highlight"></section>');
+            
+            $('article h2').wrapInner('<em></em>');
+        }) // end doc ready
+    </script>
+    
+    <style>
+        .display {
+            color: goldenrod;
+        }
+        .highlight {
+            background-color: lemonchiffon;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <h1>Welcome</h1>
+        <article id="a1" class="highlight">
+            <h2>Subhead 1</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus distinctio quos dolores autem aliquid sapiente repellendus veniam dolore ratione illum, provident molestiae maxime dignissimos sed maiores expedita sit voluptas id.</p>
+        </article>
+        <article id="a2">
+            <h2>Subhead 2</h2>
+            <p>Illo adipisci aut accusantium iure voluptatem doloremque expedita veniam quam laborum, magni, est velit eius. Aut officiis, mollitia modi nisi laudantium perferendis, atque libero, laborum animi quidem, et consectetur cupiditate!</p>
+        </article>
+        <article id="a3">
+            <h2>Subhead 3</h2>
+            <p>Eum delectus quas error optio, dicta aspernatur aut asperiores recusandae, voluptatibus commodi ea reiciendis, odit quis? Modi vitae, consequuntur rerum, praesentium numquam nostrum odio at quae facilis optio neque! Autem?</p>
+        </article>
+        <button>Click me</button>
+    </section>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery example 1</title>
+    <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
+    
+    <script>
+        $(document).ready(function(){
+            // basic selectors
+            $('h1').css('color','red');
+            $('.intro').css('line-height', 1.7).css('font-family', 'sans-serif');
+            // filter selectors
+            $('li:gt(3)').css('color', 'orange');
+            $(':header').css('font-style', 'italic');
+            $('li:nth-child(3)').css('font-weight', 'bold');
+            // content selectors
+            $('ul li:contains("4")').css('text-transform','uppercase');
+            $('ul li:empty').css('background-color', 'lightblue');
+            $('ul li:has(a)').css('border','solid 1px green');
+            $('li a:parent').css('font-family', 'courier');
+            
+            
+        }); // end doc ready
+        
+// straight js method
+//        window.addEventListener('load', function(){
+//           document.querySelector('h2').style.color='blue';
+//       })
+        
+    </script>
+</head>
+<body>
+<!--    header>h1{Main Heading}+h2{Sub Heading}+p>lorem^^section>h3{Body Copy Heading}+p*2>lorem^ul>li{item $}*7^p>lorem^footer>p>lorem-->
+<header>
+    <h1>Main Heading</h1>
+    <h2>Sub Heading</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, repellendus pariatur minus commodi molestiae consequuntur culpa <a href="#">I'm a link</a> voluptatem ratione molestias ullam architecto doloremque, accusamus id quod fugiat ex officiis maxime animi?</p>
+</header>
+<section>
+    <h3>Body Copy Heading</h3>
+    <p class="intro">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut dolor quasi ex possimus maiores, sed aspernatur voluptatum quos! Quasi accusamus amet ut enim rerum, fuga ipsum alias minima. Recusandae, laboriosam.</p>
+    <p>Suscipit asperiores, laboriosam quo fuga doloribus ad numquam atque delectus nemo iste quis sed ipsa error voluptatum, eveniet laudantium laborum ipsum! Commodi, quam fugiat officia dicta vitae atque odio magnam!</p>
+    <ul>
+        <li>item 1</li>
+        <li>item 2</li>
+        <li>item 3</li>
+        <li>item 4</li>
+        <li>item 5</li>
+        <li>item 6</li>
+        <li>item 7</li>
+        <li>4 apple from the store</li>
+        <li></li>
+        <li>This is a <a href="https://google.com">good place</a> to find stuff</li>
+    </ul>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius omnis, veritatis assumenda fugiat saepe, deserunt recusandae soluta ipsa, et laboriosam doloribus nostrum. Quis atque vel, nemo sint facere. Officia, ducimus.</p>
+    <ul>
+        <li>something...</li>
+        <li>something...</li>
+        <li>something...</li>
+    </ul>
+    <footer>
+        <p class="intro">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam enim repellat illo est a commodi id, soluta cupiditate placeat eum facilis ad repudiandae dignissimos facere animi excepturi iusto cumque ex.</p>
+    </footer>
+</section>
+
+</body>
+</html>

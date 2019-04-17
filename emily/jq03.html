@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery example 1</title>
+    <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
+    
+    <script>
+        $(document).ready(function(){
+            $('form :radio').css('outline', 'solid 1px orange');
+            $('form :checked').css('outline', 'solid 1px green');
+            $('form input:not(:checked)').css('outline', 'solid 1px yellow');
+            
+            //$('form :disabled').css('display', 'none');
+            //$('form :enabled').css('outline', 'solid 1px purple');
+            $('form :submit').css('font-weight', 'bold');
+        }); // end doc ready
+        
+    </script>
+</head>
+<body>
+
+<header>
+    <h1>Main Heading</h1>
+    <h2>Sub Heading</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, repellendus pariatur minus commodi molestiae consequuntur culpa <a href="#">I'm a link</a> voluptatem ratione molestias ullam architecto doloremque, accusamus id quod fugiat ex officiis maxime animi?</p>
+</header>
+<section>
+    <h3>Body Copy Heading</h3>
+    <form action="#">
+        <label for="q1">Quantity desired:</label>
+        <input type="text" size="3" placeholder="0" id="q1">
+        <br>
+        <label for="q2">Quantity desired:</label>
+        <input type="text" size="3" placeholder="0" id="q2">
+        <br>
+        <label for="q3">Quantity desired:</label>
+        <input type="text" size="3" placeholder="0" id="q3">
+        <br>
+        <label for="q4">Quantity desired:</label>
+        <input type="text" size="3" placeholder="0" id="q4">
+        <br>
+        
+        <label for="s-state">State:</label>
+          <select name="s-state" id="s-state">
+              <option value="">- select -</option>
+              <option value="CA">California (7.75% tax)</option>
+              <option value="WA">Washington</option>
+              <option value="OR">Oregon</option>
+              <option value="AZ">Arizona</option>
+          </select>
+          <br>
+          
+              <label for="shipping-method">Shipping Method</label>
+              <br>
+              <input type="radio" name="r_method" value="pickup" id="r-method-pickup" checked>
+              <label for="r-method-pickup">Pickup (free)</label>
+              <br>
+              <input type="radio" name="r_method" value="usps" id="r-method-usps">
+              <label for="r-method-usps">US mail ($2/bottle)</label>
+              <br>
+              <input type="radio" name="r_method" value="ups" id="r-method-ups">
+              <label for="r-method-ups">UPS ($3/bottle)</label>
+              <br>
+              
+<!--(input#st$[type=checkbox]+label[for=st$]{Something $}+br)*8-->
+              <label for="fav">Favorite Things</label>
+              <br>
+              <input type="checkbox" id="st1" checked>
+              <label for="st1">Something 1</label>
+              <br>
+              <input type="checkbox" id="st2"  disabled>
+              <label for="st2">Something 2</label>
+              <br>
+              <input type="checkbox" id="st3">
+              <label for="st3">Something 3</label>
+              <br>
+              <input type="checkbox" id="st4">
+              <label for="st4">Something 4</label>
+              <br>
+              <input type="checkbox" id="st5">
+              <label for="st5">Something 5</label>
+              <br>
+              <input type="checkbox" id="st6">
+              <label for="st6">Something 6</label>
+              <br>
+              <input type="checkbox" id="st7">
+              <label for="st7">Something 7</label>
+              <br>
+              <input type="checkbox" id="st8" checked>
+              <label for="st8">Something 8</label>
+              <br>
+              
+              <input type="submit">
+              <input type="reset">
+    </form>
+    <footer>
+        <p class="intro">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam enim repellat illo est a commodi id, soluta cupiditate <a href="ftp://www.something.com">ftp link</a> placeat eum facilis ad repudiandae dignissimos facere animi excepturi iusto cumque ex.</p>
+    </footer>
+</section>
+
+</body>
+</html>

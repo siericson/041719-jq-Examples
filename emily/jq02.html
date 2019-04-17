@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery example 1</title>
+    <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
+    
+    <script>
+        $(document).ready(function(){
+            $('a[href^="http"]').css('background-color', '#999');
+            $('label[for*="t"]').css('color','purple');
+            
+            $('li[class~="fish"]').css('font-weight', 'bold'); // ~ seperate word, * is getting anything use of that string anywhere, ^ anything that starts with
+            $('a[href$="com"]').css('text-decoration', 'none'); // $ ends with
+            $('li[class!="fish"]').css('color', 'teal'); // ! is not
+            
+            $('input[type="text"]').css('background-color', 'yellow');
+            
+            $('input[type="text"][name]').css('border','solid 3px hotpink');
+            
+        }); // end doc ready
+        
+    </script>
+</head>
+<body>
+
+<header>
+    <h1>Main Heading</h1>
+    <h2>Sub Heading</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, repellendus pariatur minus commodi molestiae consequuntur culpa <a href="#">I'm a link</a> voluptatem ratione molestias ullam architecto doloremque, accusamus id quod fugiat ex officiis maxime animi?</p>
+</header>
+<section>
+    <h3>Body Copy Heading</h3>
+    <p class="intro">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut dolor quasi ex possimus maiores, sed aspernatur voluptatum quos! Quasi accusamus amet ut enim rerum, fuga ipsum alias minima. Recusandae, laboriosam.</p>
+    <p>Suscipit asperiores, laboriosam quo fuga doloribus ad numquam atque delectus nemo iste quis sed ipsa error voluptatum, eveniet laudantium laborum ipsum! Commodi, quam fugiat officia dicta vitae atque odio magnam!</p>
+    <ul>
+        <li class="fish">item 1</li>
+        <li class="starfish">item 2</li>
+        <li class="fish sticks">item 3</li>
+        <li class="fishy sticks">item 4</li>
+        <li>item 5</li>
+        <li>item 6</li>
+        <li>item 7</li>
+        <li>4 apple from the store</li>
+        <li></li>
+        <li>This is a <a href="https://google.com">good place</a> to find stuff</li>
+    </ul>
+    <form action="#">
+        <label for="other">Label 1</label>
+        <input type="text">
+        <label for="t">Label 2</label>
+        <input type="tel" name="phone">
+        <label for="three">Label 3</label>
+        <input type="text" name="three" id="three">
+    </form>
+    <footer>
+        <p class="intro">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam enim repellat illo est a commodi id, soluta cupiditate <a href="ftp://www.something.com">ftp link</a> placeat eum facilis ad repudiandae dignissimos facere animi excepturi iusto cumque ex.</p>
+    </footer>
+</section>
+
+</body>
+</html>
